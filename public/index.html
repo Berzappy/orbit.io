@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Orbit.io</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <canvas id="game"></canvas>
+
+    <div id="stats" class="hidden">
+      <div class="label">MASS</div>
+      <div id="mass">20</div>
+      <div id="rank"></div>
+    </div>
+
+    <div id="leaderboard">
+      <h3>Leaderboard</h3>
+      <ol id="lbList"></ol>
+    </div>
+
+    <div id="pulse" class="hidden">
+      <div id="pulseFill"></div>
+      <span id="pulseLabel">PULSE READY · SPACE</span>
+    </div>
+
+    <div id="badge">Connecting...</div>
+    <button id="pulseBtn" class="hidden">PULSE</button>
+
+    <div id="menu" class="overlay">
+      <div class="panel">
+        <h1>ORBIT<span>.io</span></h1>
+        <p class="tag">Absorb asteroids. Grow your gravity. Swallow other planets.</p>
+        <div id="deathInfo" class="hidden"></div>
+        <input id="name" maxlength="16" placeholder="Name your planet" autocomplete="off">
+        <button id="playBtn">PLAY</button>
+
+        <div class="help">
+          <div><b>Mouse</b> to steer - farther from your planet = faster</div>
+          <div><b>Space</b> fires a gravity pulse (costs 10% mass)</div>
+          <div>Absorb planets <b>20% smaller</b> than you · <span class="g">green</span> = prey, <span class="r">red</span> = danger</div>
+        </div>
+
+        <div id="status">Connecting...</div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
